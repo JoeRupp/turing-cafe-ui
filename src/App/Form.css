@@ -1,0 +1,10 @@
+form {
+  height: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.formBtn {
+  width: 20%;
+}

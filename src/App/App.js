@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ResContainer from './ResContainer';
 import getReservations from '../apiCalls';
+import Form from './Form';
 import './App.css';
 
 class App extends Component {
@@ -16,13 +17,15 @@ class App extends Component {
     .then(data => this.setState({currentReservations: data}))
   }
 
+  addReservation = (resy) => {
+    this.setState({currentReservations: [resy, ...this.state.currentReservations]})
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <div className='resy-form'>
-          
-        </div>
+        <Form addReservation={this.addReservation}/>
         <ResContainer reservations={this.state.currentReservations}/>
       </div>
     )
@@ -32,6 +35,10 @@ class App extends Component {
 export default App;
 
 
-{/* <div className='resy-container'>
+{/* <div className='resy-form'>
+          
+</div>
+  
+ <div className='resy-container'>
       
-        </div> */}
+</div> */}
