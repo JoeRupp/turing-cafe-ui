@@ -23,12 +23,15 @@ class App extends Component {
         <div className='resy-form'>
           
         </div>
-        <div className='resy-container'>
         <ResContainer reservations={this.state.currentReservations}/>
-        </div>
       </div>
     )
   }
 }
 
 export default App;
+
+
+{/* <div className='resy-container'>
+      
+        </div> */}

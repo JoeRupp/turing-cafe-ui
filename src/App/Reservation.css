@@ -1,8 +1,8 @@
 .reservationCard {
   background-color: white;
   color: teal;
-  height: 200px;
-  width: 280px;
+  height: 95%;
+  width: 95%;
   border: 5px solid teal;
   border-radius: 10px;
   display: flex;
@@ -17,6 +17,7 @@ button {
   width: 80%;
 }
 
+h2,
 p {
   margin: 3%;
 }

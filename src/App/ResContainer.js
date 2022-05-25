@@ -1,6 +1,6 @@
 import React from 'react';
 import Reservation from './Reservation';
-import './Reservation.css'
+import './ResContainer.css'
 
 const ResContainer = ({reservations}) => {
   const createReservations = reservations.map((resy) => {
@@ -16,7 +16,7 @@ const ResContainer = ({reservations}) => {
   })
 
   return(
-    <section>
+    <section className='resContainer'>
       {createReservations}
     </section>
   )
