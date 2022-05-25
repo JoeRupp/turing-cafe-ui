@@ -4,4 +4,18 @@ const getReservations = () => {
   .catch(err => console.log(err))
 }
 
-export default getReservations;
+const makeReservation = (newResy) => {
+  return fetch('http://localhost:3001/api/v1/reservations', {
+    method: "POST",
+    body: JSON.stringify(newResy),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.log(err))
+}
+
+export {getReservations, makeReservation};
+// export default getReservations;

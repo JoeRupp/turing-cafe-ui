@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ResContainer from './ResContainer';
-import getReservations from '../apiCalls';
+import {getReservations} from '../apiCalls';
 import Form from './Form';
 import './App.css';
 
@@ -16,6 +16,11 @@ class App extends Component {
     getReservations()
     .then(data => this.setState({currentReservations: data}))
   }
+
+  // componentDidUpdate = () => {
+  //   getReservations()
+  //   .then(data => this.setState({currentReservations: data}))
+  // }
 
   addReservation = (resy) => {
     this.setState({currentReservations: [resy, ...this.state.currentReservations]})
@@ -33,12 +38,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-{/* <div className='resy-form'>
-          
-</div>
-  
- <div className='resy-container'>
-      
-</div> */}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {makeReservation} from '../apiCalls';
 import './Form.css'
 
 class Form extends Component {
@@ -25,6 +26,7 @@ class Form extends Component {
       time: this.state.time,
       number: this.state.number
     }
+    makeReservation(newResy)
     this.props.addReservation(newResy)
   }
 
