@@ -17,10 +17,10 @@ class App extends Component {
     .then(data => this.setState({currentReservations: data}))
   }
 
-  // componentDidUpdate = () => {
-  //   getReservations()
-  //   .then(data => this.setState({currentReservations: data}))
-  // }
+  componentDidUpdate = () => {
+    getReservations()
+    .then(data => this.setState({currentReservations: data}))
+  }
 
   addReservation = (resy) => {
     this.setState({currentReservations: [resy, ...this.state.currentReservations]})

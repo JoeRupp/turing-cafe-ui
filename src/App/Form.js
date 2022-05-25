@@ -27,7 +27,6 @@ class Form extends Component {
       number: this.state.number
     }
     makeReservation(newResy)
-    this.props.addReservation(newResy)
   }
 
   render() {

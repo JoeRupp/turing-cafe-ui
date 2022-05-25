@@ -18,4 +18,3 @@ const makeReservation = (newResy) => {
 }
 
 export {getReservations, makeReservation};
-// export default getReservations;
